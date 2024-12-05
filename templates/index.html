@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Splitter</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+    <script>
+        function addRow() {
+            const table = document.getElementById("menuTable");
+            const newRow = table.insertRow();
+            newRow.innerHTML = `
+                <td><input type="text" name="dish_name[]" placeholder="Dish Name"></td>
+                <td><input type="number" name="dish_price[]" placeholder="Price" step="0.01" min="0"></td>
+            `;
+        }
+
+        function addNameField() {
+            const namesDiv = document.getElementById("namesDiv");
+            const newNameField = document.createElement('input');
+            newNameField.setAttribute('type', 'text');
+            newNameField.setAttribute('name', 'names[]');
+            newNameField.setAttribute('placeholder', 'Enter Name');
+            namesDiv.appendChild(newNameField);
+            namesDiv.appendChild(document.createElement('br'));
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Bill Splitter</h1>
+    <form action="/dishes" method="POST">
+        <h3>Enter Dish Names and Prices:</h3>
+        <table id="menuTable">
+            <tr>
+                <td><input type="text" name="dish_name[]" placeholder="Dish Name"></td>
+                <td><input type="number" name="dish_price[]" placeholder="Price" step="0.01" min="0"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="dish_name[]" placeholder="Dish Name"></td>
+                <td><input type="number" name="dish_price[]" placeholder="Price" step="0.01" min="0"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="dish_name[]" placeholder="Dish Name"></td>
+                <td><input type="number" name="dish_price[]" placeholder="Price" step="0.01" min="0"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="dish_name[]" placeholder="Dish Name"></td>
+                <td><input type="number" name="dish_price[]" placeholder="Price" step="0.01" min="0"></td>
+            </tr>
+        </table>
+        <button type="button" onclick="addRow()">Add Another Dish</button>
+
+        <div id="namesSection">
+            <h3>Enter Names of People Eating:</h3>
+            <div id="namesDiv">
+                <input type="text" name="names[]" placeholder="Name"><br>
+                <input type="text" name="names[]" placeholder="Name"><br>
+                <input type="text" name="names[]" placeholder="Name"><br>
+            </div>
+            <button type="button" onclick="addNameField()">Add Another Name</button>
+        </div>
+
+        <h3>Enter Total Tax and Tip:</h3>
+        <label>Tax: <input type="number" name="tax" step="0.01" min="0" required></label><br>
+        <label>Tip: <input type="number" name="tip" step="0.01" min="0" required></label><br>
+
+        <button type="submit" id="next">Next</button>
+    </form>
+</body>
+
+</html>

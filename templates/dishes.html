@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Splitter - Select Dishes</title>
+    <link rel="stylesheet" href="/static/css/dishes.css">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <h1>Select the Dishes You Ate</h1>
+    <form action="/submit_assignments" method="POST">
+        {% for name in names %}
+        <h3>{{ name }}</h3>
+        {% for dish in menu_items %}
+        {% if dish[0] and dish[1] %}
+        <label class="container">{{ dish[0] }} - ${{ dish[1] }}
+            <input type="checkbox" name="{{ name }}" value="{{ loop.index0 }}">
+            <span class="checkmark"></span>
+          </label>
+        {% endif %}
+        {% endfor %}
+        <br>
+        {% endfor %}
+
+        <input type="hidden" name="tax" value="{{ request.args.get('tax') }}">
+        <input type="hidden" name="tip" value="{{ request.args.get('tip') }}">
+
+        <button type="submit">Calculate</button>
+    </form>
+</body>
+
+</html>

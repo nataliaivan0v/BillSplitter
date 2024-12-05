@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@400;700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5DC; 
+    color: #014421; 
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    margin-top: 30px;
+    font-family: 'Abril Fatface', serif;
+    font-size: 60px;  
+    padding-top: 15px;
+}
+
+h3 {
+    font-family: Poppins, sans-serif;
+    font-size: 25px; 
+    margin-top: 20px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 80%;
+    padding: 8px;
+    font-size: 1.2em;
+    border: 2px solid #014421;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    color: #014421;
+    font-family: Poppins, sans-serif;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    outline: none;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.6);
+    border-color: #013B36;
+    font-family: Poppins, sans-serif;
+}
+
+form {
+    margin: 0 auto;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 10px;
+}
+
+button {
+    background-color: #014421;
+    color: #F5F5DC;
+    padding: 15px 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: Poppins, sans-serif;
+    font-size: medium;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #013B36;
+    color: #F5F5DC;
+}
+
+.names-block {
+    background-color: #F5F5DC;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    font-family: Poppins, sans-serif;
+}
+
+.names-block input {
+    margin: 5px 0;
+}
+
+.tax-tip-block {
+    background-color: #014421;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.tax-tip-block label {
+    display: block;
+    margin: 10px 0;
+}
+
+#menuTable input[type="text"] {
+    width: 400px;
+    padding: 8px;
+    font-size: 0.95em;
+    border: 2px solid #014421;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    color: #014421;
+}
+
+#menuTable input[type="number"] {
+    width: 150px;
+    font-size: 0.95em;
+}
+
+#menuTable td {
+    padding: 7px;
+    text-align: center;
+}
+
+#menuTable input[type="text"]:focus, 
+#menuTable input[type="number"]:focus {
+    outline: none;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+    border-color: #013B36;
+}
+
+#namesDiv input[type="text"] {
+    width: 350px;
+    padding: 8px; 
+    font-size: 0.95em;
+    border: 2px solid #014421;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    color: #014421;
+    margin-bottom: 15px;
+}
+
+#namesDiv input[type="text"]:focus {
+    outline: none;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+    border-color: #013B36;
+}
+
+label input[type="number"] {
+    width: 180px;
+    padding: 8px;
+    font-size: 0.95em;
+    border: 2px solid #014421;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    color: #014421;
+    margin-left: 7px;
+    margin-bottom: 15px;
+}
+
+label input[type="number"]:focus {
+    outline: none;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+    border-color: #013B36;
+}
+
+label {
+    font-size: 0.95em;
+    color: #014421;
+    font-family: Poppins, sans-serif;
+}
+
+#namesSection {
+    background-color: #014421;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    margin: 20px auto;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+#namesSection h3 {
+    color: #F5F5DC;
+    margin-bottom: 32px;
+}
+
+#namesSection button {
+    background-color: #F5F5DC;
+    color: #014421;
+    padding: 10px 15px;
+    border: 2px solid #F5F5DC;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95em;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    font-family: Poppins, sans-serif;
+    padding: 15px 40px;
+}
+
+#namesSection button:hover {
+    background-color: #EDE9D5;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+#next {
+    margin-bottom: 60px;
+}
